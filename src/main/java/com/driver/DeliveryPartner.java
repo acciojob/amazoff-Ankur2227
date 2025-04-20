@@ -1,24 +1,15 @@
 package com.driver;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
 public class DeliveryPartner {
+    private String partnerId;
+    private int numberOfOrders = 0;
 
-    private String id;
-    private int numberOfOrders;
-
-    public DeliveryPartner(String id) {
-        this.id = id;
-        this.numberOfOrders = 0;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public Integer getNumberOfOrders(){
-        return numberOfOrders;
-    }
-
-    public void setNumberOfOrders(Integer numberOfOrders) {
-        this.numberOfOrders = numberOfOrders;
+    public DeliveryPartner(String partnerId) {
+        this.partnerId = partnerId;
     }
 }
